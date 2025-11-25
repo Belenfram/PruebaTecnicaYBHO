@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interfaz de galería de fotos" />
+  <title>Galería de Fotos - Vista de Álbumes</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./css/album.css" />
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+    <section class="bg-gradient-to-b from-blue-50 to-blue-100 p-4" aria-label="Búsqueda">
+
+        <div class="flex items-center bg-[#c8eaf6] rounded-full px-4 py-3 shadow-md">
+            
+            <button type="button" aria-label="Buscar">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            </button>
+
+            <input
+            type="search"
+            id="albumSearch"
+            placeholder="Buscar las carpetas"
+            class="flex-1 ml-3 bg-transparent outline-none text-gray-700 placeholder-gray-600"
+            aria-label="Buscar en carpetas"
+            />
+
+            <button type="button" class="p-1 rounded-full transition-colors ml-2" aria-label="Abrir cámara">
+            <svg class="w-6 h-6 text-gray-800" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 5h-3.2l-1.7-2.3c-.2-.4-.6-.7-1.1-.7H9c-.4 0-.9.3-1.1.7L6.2 5H3.9C2.9 5 2 5.9 2 6.9v11.2C2 19.1 2.9 20 3.9 20H20c1.1 0 2-.9 2-1.9V6.9C22 5.9 21.1 5 20 5zm-8 12.1c-2.3 0-4.1-1.8-4.1-4.1S9.7 8.9 12 8.9s4.1 1.8 4.1 4.1-1.8 4.1-4.1 4.1z"/>
+            </svg>
+            </button>
+
+            <a href="./photos.html" aria-label="Ver galería" class="p-1 rounded-full transition-colors ml-2 inline-flex items-center">
+            <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                    clip-rule="evenodd" />
+            </svg>
+            </a>
+
+
+            <button type="button" class="p-1 rounded-full transition-colors ml-2" aria-label="Más opciones">
+            <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4zm0 6a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+            </button>
+
+        </div>
+    
+    </section>
+
+    <!--Álbums-->
+    <main class="grid grid-cols-2 gap-0" aria-label="Álbumes de fotos">
+        <!--Pines-->
+        <article class="album-card relative h-64 overflow-hidden cursor-pointer">
+        <img
+            src="./images/image1.jpeg"
+            alt="Carpeta de pins"
+            class="w-full h-full object-cover"
+            loading="lazy"
+        />
+        <div class="album-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h2 class="album-name text-white text-xl font-semibold mb-0.5">Pins</h2>
+            <p class="text-white/90 text-sm">38</p>
+        </div>
+        </article>
+
+        <!--WhatsApp Images-->
+        <article class="album-card relative h-64 overflow-hidden cursor-pointer">
+        <img
+            src="./images/image8.jpeg"
+            alt="Carpeta de imágenes de WhatsApp"
+            class="w-full h-full object-cover"
+            loading="lazy"
+        />
+        <div class="album-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h2 class="album-name text-white text-xl font-semibold mb-0.5">WhatsApp Images</h2>
+            <p class="text-white/90 text-sm">77</p>
+        </div>
+        </article>
+
+        <!--Camera -->
+        <article class="album-card relative h-64 overflow-hidden cursor-pointer">
+        <img
+            src="./images/image4.jpeg"
+            alt="Carpeta de cámara"
+            class="w-full h-full object-cover"
+            loading="lazy"
+        />
+        <div class="album-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h2 class="album-name text-white text-xl font-semibold mb-0.5">Camera</h2>
+            <p class="text-white/90 text-sm">214</p>
+        </div>
+        </article>
+
+        <!--Screenshots -->
+        <article class="album-card relative h-64 overflow-hidden cursor-pointer">
+        <img
+            src="./images/image3.jpeg"
+            alt="Carpeta de capturas de pantalla"
+            class="w-full h-full object-cover"
+            loading="lazy"
+        />
+        <div class="album-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h2 class="album-name text-white text-xl font-semibold mb-0.5">Screenshots</h2>
+            <p class="text-white/90 text-sm">7</p>
+        </div>
+        </article>
+
+        <!--Telegram -->
+        <article class="album-card relative h-64 overflow-hidden cursor-pointer">
+        <img
+            src="./images/image5.jpeg"
+            alt="Carpeta de Telegram"
+            class="w-full h-full object-cover"
+            loading="lazy"
+        />
+        <div class="album-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h2 class="album-name text-white text-xl font-semibold mb-0.5">Telegram</h2>
+            <p class="text-white/90 text-sm">3</p>
+        </div>
+        </article>
+
+        <!--Pictures -->
+        <article class="album-card relative h-64 overflow-hidden cursor-pointer">
+        <img
+            src="./images/image6.jpeg"
+            alt="Carpeta de imágenes"
+            class="w-full h-full object-cover"
+            loading="lazy"
+        />
+        <div class="album-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h2 class="album-name text-white text-xl font-semibold mb-0.5">Pictures</h2>
+            <p class="text-white/90 text-sm">2</p>
+        </div>
+        </article>
+
+        <!--Download -->
+        <article class="album-card relative h-64 overflow-hidden cursor-pointer">
+        <img
+            src="./images/image7.jpeg"
+            alt="Carpeta de descargas"
+            class="w-full h-full object-cover"
+            loading="lazy"
+        />
+        <div class="album-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h2 class="album-name text-white text-xl font-semibold mb-0.5">Download</h2>
+            <p class="text-white/90 text-sm">12</p>
+        </div>
+        </article>
+
+        <!--WhatsApp Video -->
+        <article class="album-card relative h-64 overflow-hidden cursor-pointer">
+        <img
+            src="./images/image2.jpeg"
+            alt="Carpeta de videos de WhatsApp"
+            class="w-full h-full object-cover"
+            loading="lazy"
+        />
+        <div class="album-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h2 class="album-name text-white text-xl font-semibold mb-0.5">WhatsApp Video</h2>
+            <p class="text-white/90 text-sm">5</p>
+        </div>
+        </article>
+    </main>
+
+  <script src="./js/album.js" defer></script>
+</body>
+</html>

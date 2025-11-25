@@ -1,0 +1,24 @@
+/*Estilos para la vista de álbums*/
+
+.album-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.album-card:hover {
+    transform: scale(1.02);
+}
+
+/*Overlay*/
+.album-overlay {
+    position: absolute;
+    inset: 0;
+    
+    pointer-events: none;
+}
+
+/*Optimización*/
+@media (max-width: 640px) {
+    .album-card {
+        height: 16rem;
+    }
+}

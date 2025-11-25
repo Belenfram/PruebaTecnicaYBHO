@@ -1,0 +1,44 @@
+/*Estilos para la vista de fotos*/
+
+.photo-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    transition: background-color 0.2s ease;
+}
+
+.photo-item:hover {
+    background-color: #f9fafb;
+}
+
+.photo-thumbnail {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.photo-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #111827;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*Optimización*/
+@media (max-width: 640px) {
+    .photo-thumbnail,
+    .video-thumbnail-container {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    
+    .photo-title {
+        font-size: 0.95rem;
+    }
+}
